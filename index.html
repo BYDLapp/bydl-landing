@@ -7,9 +7,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bone:#F7F2EB;--paper:#FFFFFF;--ink:#1F1A16;--ink-2:#4A4037;--muted:#8A7F73;
+  --bone:#F7F2EB;--paper:#FFFFFF;--sand:#EFE7DC;--ink:#1F1A16;--ink-2:#4A4037;--muted:#8A7F73;
   --line:rgba(31,26,22,.10);--terra:#B4553A;--terra-deep:#8E3F2B;--terra-soft:#F4E2DA;
-  --gold:#B8894B;--shadow-lg:0 10px 34px rgba(31,26,22,.10);
+  --gold:#B8894B;--sage:#7C8B72;--sage-soft:#E7EBE2;--shadow-lg:0 10px 34px rgba(31,26,22,.10);
+  --ease:cubic-bezier(.22,1,.36,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bone);color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -24,16 +25,59 @@ body{background:var(--bone);color:var(--ink);font-family:'Manrope',sans-serif;li
 .hero p{color:var(--ink-2);font-size:16px;max-width:440px;margin:0 auto}
 .status{display:inline-flex;align-items:center;gap:8px;margin-top:30px;padding:11px 20px;border-radius:100px;
   background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow-lg);font-size:13px;font-weight:700;color:var(--ink-2)}
-.status .dot{width:7px;height:7px;border-radius:50%;background:var(--terra)}
-main{padding:56px 0 40px}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--terra);animation:blip 2s ease-in-out infinite}
+@keyframes blip{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ---- phone mockup ---- */
+.showcase{padding:8px 24px 8px;display:flex;justify-content:center}
+.phone{width:100%;max-width:270px;border-radius:40px;background:linear-gradient(160deg,#2A241F,#17130F);padding:11px;
+  box-shadow:0 40px 70px rgba(31,26,22,.28),inset 0 0 0 1px rgba(255,255,255,.04)}
+.phone .screen{background:var(--bone);border-radius:29px;padding:34px 16px 20px;position:relative;overflow:hidden}
+.phone .island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:64px;height:16px;background:#17130F;border-radius:100px}
+.mock-eyebrow{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:800;margin-bottom:6px}
+.mock-title{font-family:'Fraunces',serif;font-size:16.5px;margin-bottom:14px}
+.mock-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 15px;box-shadow:0 6px 18px rgba(31,26,22,.08)}
+.mock-row{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-2);padding:5px 0}
+.mock-total{display:flex;justify-content:space-between;align-items:baseline;padding-top:10px;margin-top:6px;border-top:1px dashed var(--line)}
+.mock-total .l{font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.mock-total .v{font-family:'Fraunces',serif;font-size:22px;color:var(--terra)}
+.mock-note{display:flex;align-items:center;gap:6px;margin-top:10px;padding:8px 10px;border-radius:10px;background:var(--sand);color:var(--muted);font-size:8.5px;line-height:1.4}
+.mock-bar-wrap{margin-top:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 6px 18px rgba(31,26,22,.08)}
+.mock-bar-top{display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-bottom:7px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.mock-bar{height:6px;border-radius:6px;background:var(--sand);overflow:hidden}
+.mock-bar i{display:block;height:100%;width:64%;border-radius:6px;background:linear-gradient(90deg,var(--sage),var(--gold))}
+
+main{padding:44px 0 40px}
+.section-h{text-align:center;margin-bottom:28px}
+.section-h .kicker2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);font-weight:800;margin-bottom:8px}
+.section-h h2{font-family:'Fraunces',serif;font-weight:500;font-size:25px;letter-spacing:-.01em}
 .feats{display:grid;gap:16px;margin-bottom:8px}
 .feat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow-lg)}
 .feat .n{font-family:'Fraunces',serif;font-size:13px;color:var(--terra);font-weight:600;margin-bottom:6px}
 .feat h3{font-family:'Fraunces',serif;font-weight:500;font-size:19px;margin-bottom:6px}
 .feat p{color:var(--ink-2);font-size:14.5px}
-footer{padding:36px 24px 56px;text-align:center;color:var(--muted);font-size:12.5px;line-height:2;border-top:1px solid var(--line)}
+
+/* ---- FAQ ---- */
+.faq{margin-top:64px}
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;box-shadow:var(--shadow-lg);overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:17px 20px;font-weight:700;font-size:14.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:20px;color:var(--terra);flex:none;transition:transform .25s var(--ease);font-weight:400}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{padding:0 20px 18px;color:var(--ink-2);font-size:13.5px;line-height:1.65}
+
+/* ---- closing CTA ---- */
+.cta-band{margin-top:64px;padding:44px 28px;border-radius:26px;text-align:center;
+  background:radial-gradient(120% 100% at 50% 0%,var(--terra-soft),var(--bone) 70%);border:1px solid var(--line)}
+.cta-band h2{font-family:'Fraunces',serif;font-weight:500;font-size:24px;margin-bottom:10px;letter-spacing:-.01em}
+.cta-band p{color:var(--ink-2);font-size:14.5px;margin-bottom:22px}
+.cta-btn{display:inline-block;padding:15px 28px;border-radius:100px;background:var(--terra);color:#fff;font-weight:700;font-size:14.5px;
+  text-decoration:none;box-shadow:0 10px 26px rgba(180,85,58,.32);transition:transform .15s var(--ease)}
+.cta-btn:active{transform:scale(.96)}
+
+footer{padding:36px 24px 56px;text-align:center;color:var(--muted);font-size:12.5px;line-height:2;border-top:1px solid var(--line);margin-top:20px}
 footer a{color:var(--terra-deep);text-decoration:underline;text-underline-offset:2px}
-@media(max-width:480px){.wordmark{font-size:32px}.hero h1{font-size:26px}.hero{padding:56px 20px 34px}}
+@media(max-width:480px){.wordmark{font-size:32px}.hero h1{font-size:26px}.hero{padding:56px 20px 34px}.section-h h2{font-size:21px}}
 </style></head><body>
 
 <div class="hero">
@@ -65,6 +109,28 @@ footer a{color:var(--terra-deep);text-decoration:underline;text-underline-offset
   <div class="status"><span class="dot"></span>Coming soon to iOS and Android</div>
 </div>
 
+<div class="showcase">
+  <div class="phone">
+    <div class="screen">
+      <div class="island"></div>
+      <div class="mock-eyebrow">YOUR PLAN</div>
+      <div class="mock-title">Lisbon, by the water</div>
+      <div class="mock-card">
+        <div class="mock-row"><span>Home</span><span>$1,240</span></div>
+        <div class="mock-row"><span>Getting around</span><span>$310</span></div>
+        <div class="mock-row"><span>Food</span><span>$540</span></div>
+        <div class="mock-row"><span>Clothes</span><span>$180</span></div>
+        <div class="mock-total"><span class="l">Total each month</span><span class="v">$3,140</span></div>
+      </div>
+      <div class="mock-note"><span>≈</span><span>This is an estimate — real prices can vary by local market.</span></div>
+      <div class="mock-bar-wrap">
+        <div class="mock-bar-top"><span>This month's target</span><span>64%</span></div>
+        <div class="mock-bar"><i></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <main class="wrap">
   <div class="feats">
     <div class="feat">
@@ -82,6 +148,39 @@ footer a{color:var(--terra-deep);text-decoration:underline;text-underline-offset
       <h3>Get there</h3>
       <p>A savings target and a step-by-step path from where you are now to that number.</p>
     </div>
+  </div>
+
+  <div class="faq">
+    <div class="section-h">
+      <div class="kicker2">Questions</div>
+      <h2>Before you ask</h2>
+    </div>
+    <details class="faq-item">
+      <summary>Is this financial advice?</summary>
+      <p>No. Every number in BYDL is an estimate built from current market data — a starting point for your own planning, not a personal recommendation to save, spend, borrow, invest, or move. See our Financial Disclaimer for the full picture.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How does the price estimate work?</summary>
+      <p>You answer a few honest questions about the life you want — country, home, car, style, daily rhythm, travel. BYDL sends that to an AI model that estimates realistic, itemized monthly costs for that exact lifestyle in that exact place.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What does Premium include?</summary>
+      <p>The full line-by-line cost breakdown, a lighter version of the same plan with what to change to reach it, your six-step path with monthly targets, and spending tips tied to your own choices.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is my data safe?</summary>
+      <p>BYDL has no user accounts, sign-in, or profile. Your answers are sent once to generate your estimate and are not stored afterwards. No ad SDKs, no tracking. Full details in our Privacy Policy.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Which countries are supported?</summary>
+      <p>BYDL prices lifestyles in over a hundred countries across every region, with more detail being added as we grow.</p>
+    </details>
+  </div>
+
+  <div class="cta-band">
+    <h2>Build the life you want.</h2>
+    <p>BYDL launches soon on iOS and Android. Get a note the day it's live.</p>
+    <a class="cta-btn" href="mailto:hello@bydl.app?subject=Notify%20me%20when%20BYDL%20launches">Notify me at launch</a>
   </div>
 </main>
 
