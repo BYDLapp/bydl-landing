@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BYDL — Build your dream lifestyle</title>
+<meta name="description" content="Describe the life you want. BYDL prices it in real numbers and shows you the path to afford it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F7F2EB;--paper:#FFFFFF;--ink:#1F1A16;--ink-2:#4A4037;--muted:#8A7F73;
+  --line:rgba(31,26,22,.10);--terra:#B4553A;--terra-deep:#8E3F2B;--terra-soft:#F4E2DA;
+  --gold:#B8894B;--shadow-lg:0 10px 34px rgba(31,26,22,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bone);color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding:0 24px}
+.hero{padding:76px 24px 40px;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(90% 70% at 20% 0%,#F4E2DA,transparent 70%),radial-gradient(80% 60% at 85% 0%,#F3E7D3,transparent 72%),var(--bone)}
+.logo-mark{width:104px;height:104px;margin:0 auto 22px;display:block}
+.wordmark{font-family:'Italiana',serif;font-size:40px;letter-spacing:.34em;text-indent:.34em}
+.wordmark-rule{width:150px;height:1px;margin:12px auto;background:linear-gradient(90deg,transparent,var(--terra),transparent);opacity:.55}
+.kicker{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:32px;letter-spacing:-.01em;margin:26px auto 14px;max-width:480px}
+.hero p{color:var(--ink-2);font-size:16px;max-width:440px;margin:0 auto}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:30px;padding:11px 20px;border-radius:100px;
+  background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow-lg);font-size:13px;font-weight:700;color:var(--ink-2)}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--terra)}
+main{padding:56px 0 40px}
+.feats{display:grid;gap:16px;margin-bottom:8px}
+.feat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow-lg)}
+.feat .n{font-family:'Fraunces',serif;font-size:13px;color:var(--terra);font-weight:600;margin-bottom:6px}
+.feat h3{font-family:'Fraunces',serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.feat p{color:var(--ink-2);font-size:14.5px}
+footer{padding:36px 24px 56px;text-align:center;color:var(--muted);font-size:12.5px;line-height:2;border-top:1px solid var(--line)}
+footer a{color:var(--terra-deep);text-decoration:underline;text-underline-offset:2px}
+@media(max-width:480px){.wordmark{font-size:32px}.hero h1{font-size:26px}.hero{padding:56px 20px 34px}}
+</style></head><body>
+
+<div class="hero">
+  <svg class="logo-mark" viewBox="0 0 160 160" fill="none">
+    <defs>
+      <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F4E2DA"/><stop offset=".45" stop-color="#F3E7D3"/>
+        <stop offset="1" stop-color="#E9C9BE"/>
+      </linearGradient>
+      <radialGradient id="gSun" cx=".42" cy=".36" r=".8">
+        <stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#F0D5AE"/><stop offset="1" stop-color="#B8894B"/>
+      </radialGradient>
+      <clipPath id="gClip"><circle cx="80" cy="80" r="70"/></clipPath>
+    </defs>
+    <circle cx="80" cy="80" r="70" fill="url(#gSky)"/>
+    <g clip-path="url(#gClip)">
+      <circle cx="80" cy="92" r="26" fill="url(#gSun)"/>
+      <path d="M-4 118 Q40 104 80 116 Q124 129 164 110 L164 160 L-4 160 Z" fill="#1F1A16" opacity=".88"/>
+      <path d="M-4 126 Q46 114 80 124 Q126 136 164 120" stroke="#B4553A" stroke-width="1" opacity=".35" fill="none"/>
+    </g>
+    <circle cx="80" cy="80" r="70" stroke="#B4553A" stroke-width="1.4" opacity=".5"/>
+    <circle cx="80" cy="80" r="64" stroke="#B8894B" stroke-width=".7" opacity=".3"/>
+  </svg>
+  <div class="wordmark">BYDL</div>
+  <div class="wordmark-rule"></div>
+  <div class="kicker">Build your dream lifestyle</div>
+  <h1>Describe the life you want. See what it really costs.</h1>
+  <p>BYDL turns a country, a home, a car, a rhythm into a real monthly number — then builds a step-by-step path to afford it.</p>
+  <div class="status"><span class="dot"></span>Coming soon to iOS and Android</div>
+</div>
+
+<main class="wrap">
+  <div class="feats">
+    <div class="feat">
+      <div class="n">01</div>
+      <h3>Describe it</h3>
+      <p>A few honest questions about where and how you'd live — home, car, style, daily rhythm, travel.</p>
+    </div>
+    <div class="feat">
+      <div class="n">02</div>
+      <h3>Price it</h3>
+      <p>Real, itemized monthly costs for that exact lifestyle in that exact place — not a guess.</p>
+    </div>
+    <div class="feat">
+      <div class="n">03</div>
+      <h3>Get there</h3>
+      <p>A savings target and a step-by-step path from where you are now to that number.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  BYDL · Ankara, Türkiye<br>
+  <a href="https://bydlapp.github.io/bydl-legal/#terms">Terms</a> ·
+  <a href="https://bydlapp.github.io/bydl-legal/#privacy">Privacy</a> ·
+  <a href="mailto:hello@bydl.app">hello@bydl.app</a><br>
+  © 2026 BYDL. All rights reserved.
+</footer>
+
+</body></html>
