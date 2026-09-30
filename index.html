@@ -8,7 +8,15 @@
 <meta property="og:description" content="Describe the life you want. BYDL prices it in real monthly numbers and builds a step-by-step life plan to get there.">
 <meta property="og:url" content="https://bydl.app/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://bydl.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BYDL — Build your dream lifestyle">
+<meta name="twitter:description" content="Describe the life you want. BYDL prices it in real monthly numbers and builds a step-by-step life plan to get there.">
+<meta name="twitter:image" content="https://bydl.app/og-image.png">
 <link rel="canonical" href="https://bydl.app/">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="%23F857C1"/><stop offset=".55" stop-color="%23FF9280"/><stop offset="1" stop-color="%23FFD75E"/></linearGradient></defs><rect width="100" height="100" rx="26" fill="url(%23g)"/><text x="50" y="72" font-family="Poppins,Verdana,sans-serif" font-size="60" font-weight="700" fill="white" text-anchor="middle">b</text></svg>'>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -142,17 +150,25 @@ h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(25px,3.6vw,35px)
 .doc span{color:var(--muted);font-size:13px;font-weight:400}
 .doc .arw{float:right;color:var(--g1);font-weight:700}
 
-.support{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
-@media(max-width:800px){.support{grid-template-columns:1fr}}
-.sup{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px 20px;box-shadow:var(--shadow)}
-.sup .lbl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
-.sup a{font-family:'Fraunces',serif;font-weight:600;font-size:15px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;border-bottom:2px solid rgba(248,87,193,.3)}
+.support{display:flex;justify-content:center;margin-top:14px}
+.sup{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px 32px;box-shadow:var(--shadow)}
+.sup a{font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;border-bottom:2px solid rgba(248,87,193,.3)}
 .sup a:hover{border-bottom-color:var(--g1)}
 
 /* ---------- cta ---------- */
 .cta{text-align:center;padding:64px 28px;border-radius:26px;background:var(--grad-soft);border:1px solid var(--line)}
 .cta h2{margin-bottom:12px}
 .cta p{color:var(--ink-2);font-size:16px;max-width:46ch;margin:0 auto 26px}
+.waitlist-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:440px;margin:0 auto}
+.waitlist-input{flex:1;min-width:220px;padding:15px 20px;border-radius:100px;border:1px solid var(--line);background:#fff;
+  font-family:inherit;font-size:15px;color:var(--ink)}
+.waitlist-input:focus{outline:2px solid var(--g2);outline-offset:1px}
+.waitlist-form .btn{border:none;cursor:pointer}
+.waitlist-form .btn:disabled{opacity:.6;cursor:default}
+.waitlist-msg{min-height:20px;margin-top:14px;font-size:13.5px;color:var(--muted)}
+.waitlist-msg.ok{color:#1a7a4c;font-weight:600}
+.waitlist-msg.err{color:#c23b3b;font-weight:600}
+@media(max-width:480px){.waitlist-form{flex-direction:column;align-items:stretch}}
 .btn{display:inline-block;padding:15px 30px;border-radius:100px;background:var(--ink);color:#fff;font-weight:600;font-size:15px;
   text-decoration:none;box-shadow:0 12px 30px rgba(20,17,24,.18);transition:transform .16s var(--ease)}
 .btn:active{transform:scale(.965)}
@@ -353,9 +369,7 @@ footer{padding:52px 0 64px;border-top:1px solid var(--line-2)}
       <p>We answer every message. Privacy requests are answered within 30 days.</p>
     </div>
     <div class="support">
-      <div class="sup"><div class="lbl">General</div><a href="mailto:support@bydl.app">support@bydl.app</a></div>
-      <div class="sup"><div class="lbl">Help with the app</div><a href="mailto:support@bydl.app">support@bydl.app</a></div>
-      <div class="sup"><div class="lbl">Privacy &amp; your data</div><a href="mailto:support@bydl.app">support@bydl.app</a></div>
+      <div class="sup"><a href="mailto:support@bydl.app">support@bydl.app</a></div>
     </div>
   </div>
 </section>
@@ -364,11 +378,52 @@ footer{padding:52px 0 64px;border-top:1px solid var(--line-2)}
   <div class="wrap">
     <div class="cta">
       <h2>Build the life you want.</h2>
-      <p>BYDL launches soon on iOS and Android. Send us a note and we'll tell you the day it's live.</p>
-      <a class="btn" href="mailto:support@bydl.app?subject=Notify%20me%20when%20BYDL%20launches">Notify me at launch</a>
+      <p>BYDL launches soon on iOS and Android. Leave your email and we'll tell you the day it's live.</p>
+      <form id="waitlistForm" class="waitlist-form" novalidate>
+        <input id="waitlistEmail" class="waitlist-input" type="email" name="email" placeholder="you@email.com" autocomplete="email" required>
+        <button class="btn" type="submit">Notify me at launch</button>
+      </form>
+      <p id="waitlistMsg" class="waitlist-msg" role="status" aria-live="polite"></p>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  var form = document.getElementById('waitlistForm');
+  var input = document.getElementById('waitlistEmail');
+  var msg = document.getElementById('waitlistMsg');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = (input.value || '').trim();
+    if (!email) return;
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    msg.textContent = 'Adding you…';
+    msg.className = 'waitlist-msg';
+    fetch('https://bydl-backend.onrender.com/api/waitlist', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email})
+    }).then(function(r){ return r.json().then(function(d){ return {ok: r.ok, d: d}; }); })
+      .then(function(res){
+        if (res.ok) {
+          msg.textContent = "You're on the list — we'll email you at launch.";
+          msg.className = 'waitlist-msg ok';
+          form.reset();
+        } else {
+          msg.textContent = (res.d && res.d.error) || 'Something went wrong, please try again.';
+          msg.className = 'waitlist-msg err';
+        }
+      })
+      .catch(function(){
+        msg.textContent = 'Network error — please try again, or email support@bydl.app.';
+        msg.className = 'waitlist-msg err';
+      })
+      .finally(function(){ btn.disabled = false; });
+  });
+})();
+</script>
 
 <footer>
   <div class="wrap">
@@ -394,8 +449,6 @@ footer{padding:52px 0 64px;border-top:1px solid var(--line-2)}
         </div>
         <div class="f-col">
           <h4>Contact</h4>
-          <a href="mailto:support@bydl.app">support@bydl.app</a>
-          <a href="mailto:support@bydl.app">support@bydl.app</a>
           <a href="mailto:support@bydl.app">support@bydl.app</a>
         </div>
       </div>
