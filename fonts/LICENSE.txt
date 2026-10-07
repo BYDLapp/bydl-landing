@@ -1,3 +1,3 @@
-Fonts bundled with BYDL: Fraunces, Manrope, Italiana, Poppins.
+Fonts served by bydl.app: Bricolage Grotesque, Instrument Sans, Poppins (wordmark).
 Latin and Latin Extended subsets, as served by Google Fonts (https://fonts.google.com).
 Each font is licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
